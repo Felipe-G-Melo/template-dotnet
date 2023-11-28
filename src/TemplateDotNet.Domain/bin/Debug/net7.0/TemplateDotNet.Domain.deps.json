@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "TemplateDotNet.Domain/1.0.0": {
+        "runtime": {
+          "TemplateDotNet.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TemplateDotNet.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

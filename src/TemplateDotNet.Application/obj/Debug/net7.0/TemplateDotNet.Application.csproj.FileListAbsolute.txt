@@ -1,0 +1,15 @@
+C:\dev\TemplateDotNet\src\TemplateDotNet.Application\bin\Debug\net7.0\TemplateDotNet.Application.deps.json
+C:\dev\TemplateDotNet\src\TemplateDotNet.Application\bin\Debug\net7.0\TemplateDotNet.Application.dll
+C:\dev\TemplateDotNet\src\TemplateDotNet.Application\bin\Debug\net7.0\TemplateDotNet.Application.pdb
+C:\dev\TemplateDotNet\src\TemplateDotNet.Application\bin\Debug\net7.0\TemplateDotNet.Domain.dll
+C:\dev\TemplateDotNet\src\TemplateDotNet.Application\bin\Debug\net7.0\TemplateDotNet.Domain.pdb
+C:\dev\TemplateDotNet\src\TemplateDotNet.Application\obj\Debug\net7.0\TemplateDotNet.Application.csproj.AssemblyReference.cache
+C:\dev\TemplateDotNet\src\TemplateDotNet.Application\obj\Debug\net7.0\TemplateDotNet.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\TemplateDotNet\src\TemplateDotNet.Application\obj\Debug\net7.0\TemplateDotNet.Application.AssemblyInfoInputs.cache
+C:\dev\TemplateDotNet\src\TemplateDotNet.Application\obj\Debug\net7.0\TemplateDotNet.Application.AssemblyInfo.cs
+C:\dev\TemplateDotNet\src\TemplateDotNet.Application\obj\Debug\net7.0\TemplateDotNet.Application.csproj.CoreCompileInputs.cache
+C:\dev\TemplateDotNet\src\TemplateDotNet.Application\obj\Debug\net7.0\TemplateDotNet.Application.csproj.CopyComplete
+C:\dev\TemplateDotNet\src\TemplateDotNet.Application\obj\Debug\net7.0\TemplateDotNet.Application.dll
+C:\dev\TemplateDotNet\src\TemplateDotNet.Application\obj\Debug\net7.0\refint\TemplateDotNet.Application.dll
+C:\dev\TemplateDotNet\src\TemplateDotNet.Application\obj\Debug\net7.0\TemplateDotNet.Application.pdb
+C:\dev\TemplateDotNet\src\TemplateDotNet.Application\obj\Debug\net7.0\ref\TemplateDotNet.Application.dll

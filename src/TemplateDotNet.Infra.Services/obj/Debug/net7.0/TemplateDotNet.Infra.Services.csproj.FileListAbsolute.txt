@@ -1,0 +1,17 @@
+C:\dev\TemplateDotNet\src\TemplateDotNet.Infra.Services\bin\Debug\net7.0\TemplateDotNet.Infra.Services.deps.json
+C:\dev\TemplateDotNet\src\TemplateDotNet.Infra.Services\bin\Debug\net7.0\TemplateDotNet.Infra.Services.dll
+C:\dev\TemplateDotNet\src\TemplateDotNet.Infra.Services\bin\Debug\net7.0\TemplateDotNet.Infra.Services.pdb
+C:\dev\TemplateDotNet\src\TemplateDotNet.Infra.Services\bin\Debug\net7.0\TemplateDotNet.Application.dll
+C:\dev\TemplateDotNet\src\TemplateDotNet.Infra.Services\bin\Debug\net7.0\TemplateDotNet.Domain.dll
+C:\dev\TemplateDotNet\src\TemplateDotNet.Infra.Services\bin\Debug\net7.0\TemplateDotNet.Application.pdb
+C:\dev\TemplateDotNet\src\TemplateDotNet.Infra.Services\bin\Debug\net7.0\TemplateDotNet.Domain.pdb
+C:\dev\TemplateDotNet\src\TemplateDotNet.Infra.Services\obj\Debug\net7.0\TemplateDotNet.Infra.Services.csproj.AssemblyReference.cache
+C:\dev\TemplateDotNet\src\TemplateDotNet.Infra.Services\obj\Debug\net7.0\TemplateDotNet.Infra.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\TemplateDotNet\src\TemplateDotNet.Infra.Services\obj\Debug\net7.0\TemplateDotNet.Infra.Services.AssemblyInfoInputs.cache
+C:\dev\TemplateDotNet\src\TemplateDotNet.Infra.Services\obj\Debug\net7.0\TemplateDotNet.Infra.Services.AssemblyInfo.cs
+C:\dev\TemplateDotNet\src\TemplateDotNet.Infra.Services\obj\Debug\net7.0\TemplateDotNet.Infra.Services.csproj.CoreCompileInputs.cache
+C:\dev\TemplateDotNet\src\TemplateDotNet.Infra.Services\obj\Debug\net7.0\TemplateDotNet.Infra.Services.csproj.CopyComplete
+C:\dev\TemplateDotNet\src\TemplateDotNet.Infra.Services\obj\Debug\net7.0\TemplateDotNet.Infra.Services.dll
+C:\dev\TemplateDotNet\src\TemplateDotNet.Infra.Services\obj\Debug\net7.0\refint\TemplateDotNet.Infra.Services.dll
+C:\dev\TemplateDotNet\src\TemplateDotNet.Infra.Services\obj\Debug\net7.0\TemplateDotNet.Infra.Services.pdb
+C:\dev\TemplateDotNet\src\TemplateDotNet.Infra.Services\obj\Debug\net7.0\ref\TemplateDotNet.Infra.Services.dll
