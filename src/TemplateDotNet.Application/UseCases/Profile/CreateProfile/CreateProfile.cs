@@ -1,6 +1,6 @@
 ﻿using TemplateDotNet.Application.Interfaces;
 using TemplateDotNet.Application.UseCases.Profile.Common;
-using TemplateDotNet.Domain.Exceptions;
+using TemplateDotNet.Domain.Entities;
 using TemplateDotNet.Domain.Repositories;
 using Entity = TemplateDotNet.Domain.Entities;
 
@@ -27,19 +27,12 @@ public class CreateProfile : ICreateProfile
 
     public async Task<ProfileOutput> Handle(CreateProfileInput input)
     {
-        if (input.ProfilesSubMenus== null || input.ProfilesSubMenus!.Count < 0)
-            throw new EntityValidationException("Sub menus is required");
-        var validate = new VerifyIfSubMenuExists(_subMenuRepository, input.ProfilesSubMenus);
-        await validate.Handle();
+        var validate = new VerifySubMenu(_subMenuRepository, input.ProfilesSubMenus);
+        await validate.IfExists();
+        validate.IsEmpty(input.ProfilesSubMenus);
 
         var profile = new Entity.Profile(input.Name);
-        var profilesSubMenus = 
-            input.ProfilesSubMenus.Select(x => new Entity.ProfilesSubMenus(x.SubMenuId, profile.Id)).ToList();
-
-        foreach(var item in profilesSubMenus)
-        {
-            _profilesSubMenusRepository.Insert(item);
-        }
+        await AddSubMenu.Add(_profilesSubMenusRepository, input.ProfilesSubMenus, profile.Id);
 
         await _profileRepository.Insert(profile);
         await _unitOfWork.Commit();

@@ -9,4 +9,9 @@ public class ProfilesSubMenusRepository
         : base(context)
     {
     }
+
+    public void RemoveRange(List<ProfilesSubMenus> profilesSubMenus)
+    {
+        _dbSet.RemoveRange(profilesSubMenus);
+    }
 }

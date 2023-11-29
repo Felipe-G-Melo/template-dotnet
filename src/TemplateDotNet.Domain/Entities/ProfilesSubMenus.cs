@@ -10,7 +10,6 @@ public class ProfilesSubMenus : BaseEntity
     public Guid SubMenuId { get; private set; }
     [JsonIgnore]
     public SubMenu? SubMenu { get; private set; }
-    
 
     public ProfilesSubMenus(Guid subMenuId, Guid profileId)
     {

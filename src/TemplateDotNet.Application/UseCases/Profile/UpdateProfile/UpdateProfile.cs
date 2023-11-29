@@ -1,7 +1,6 @@
 ﻿using TemplateDotNet.Application.Interfaces;
 using TemplateDotNet.Application.UseCases.Profile.Common;
 using TemplateDotNet.Domain.Entities;
-using TemplateDotNet.Domain.Exceptions;
 using TemplateDotNet.Domain.Repositories;
 
 namespace TemplateDotNet.Application.UseCases.Profile.UpdateProfile;
@@ -27,40 +26,18 @@ public class UpdateProfile : IUpdateProfile
 
     public async Task<ProfileOutput> Handle(UpdateProfileInput input)
     {
-        if (input.ProfilesSubMenus == null || input.ProfilesSubMenus!.Count < 0)
-            throw new EntityValidationException("Sub menus is required");
-        var validate = new VerifyIfSubMenuExists(_subMenuRepository, input.ProfilesSubMenus);
-        await validate.Handle();
         var profile = await _profileRepository.GetById(input.Id);
+        var validate = new VerifySubMenu(_subMenuRepository, input.ProfilesSubMenus);
+        await validate.IfExists();
+        validate.IsEmpty(input.ProfilesSubMenus);
         
         profile!.Update(input.Name);
-
-        var newProfilesSubMenus = input.ProfilesSubMenus
-            .Select(profilesSubMenus => profilesSubMenus.SubMenuId).ToList()
-            .Except(
-                profile.ProfilesSubMenus!.Select(profilesSubMenus => profilesSubMenus.SubMenuId).ToList())
-            .Select(subMenuId => new ProfilesSubMenus(subMenuId, profile!.Id)).ToList();
-
-        var oldProfilesSubMenus = profile.ProfilesSubMenus!
-            .Select(profilesSubMenus => profilesSubMenus.SubMenuId).ToList()
-            .Except(
-                input.ProfilesSubMenus.Select(profilesSubMenus => profilesSubMenus.SubMenuId).ToList())
-            .Select(subMenuId => profile.ProfilesSubMenus
-                           .FirstOrDefault(profilesSubMenus => profilesSubMenus.SubMenuId == subMenuId)).ToList();
-
-        foreach (var item in newProfilesSubMenus)
-        {
-            await _profilesSubMenusRepository.Insert(item);
-        }
-        foreach (var item in oldProfilesSubMenus)
-        {
-            await _profilesSubMenusRepository.Delete(item!.Id);
-        }
+        var existingSubMenus = profile.ProfilesSubMenus!.Where(x => x.ProfileId == profile.Id).ToList();
+        _profilesSubMenusRepository.RemoveRange(existingSubMenus);
+        await AddSubMenu.Add(_profilesSubMenusRepository, input.ProfilesSubMenus, profile.Id);
 
         await _unitOfWork.Commit();
 
         return ProfileOutput.FromOutput(profile);
     }
 }
-
-
